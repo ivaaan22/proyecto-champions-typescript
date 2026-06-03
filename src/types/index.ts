@@ -1,4 +1,4 @@
-export type Page = "home" | "teams" | "matches" | "results" | "standings"
+export type Page = "home" | "teams" | "matches" | "results" | "standings" | "login" | "register"
 
 export type MatchStatus = "done" | "upcoming"
 
@@ -29,4 +29,11 @@ export type Standing = {
   pj: number
   dg: string
   pts: number
+}
+
+export type AuthUser = {
+  id: string
+  email: string
+  avatar_url?: string
+  username?: string
 }
