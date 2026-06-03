@@ -18,15 +18,17 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
   ]
 
   return (
-    <header className="bg-[#04080f] border-b border-[#1e293b] sticky top-0 z-50">
+    <header className="bg-[#1a3a5c] border-b border-[#2a5080] sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-8 h-16 flex items-center gap-8">
 
         <div className="flex items-center gap-2 mr-4">
-          <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-base">
-            ⚽
-          </div>
-          <span className="text-xl font-bold text-slate-100 tracking-wide">
-            FUTBOL <span className="text-blue-500">360</span>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/e2/UEFA_Champions_League_logo.png"
+            alt="Champions League"
+            className="w-8 h-8 object-contain"
+          />
+          <span className="text-xl font-bold text-white tracking-wide">
+            FUTBOL <span className="text-blue-300">360</span>
           </span>
         </div>
 
@@ -36,24 +38,24 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
               key={link.page}
               onClick={() => onNavigate(link.page)}
               className={`relative h-16 px-4 text-sm font-medium transition-colors cursor-pointer border-none bg-transparent
-                ${currentPage === link.page ? "text-slate-100" : "text-slate-400 hover:text-slate-100"}`}
+                ${currentPage === link.page ? "text-white" : "text-blue-100 hover:text-white"}`}
             >
               {link.label}
               {currentPage === link.page && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500" />
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-300" />
               )}
             </button>
           ))}
         </nav>
 
         <div className="hidden md:flex items-center gap-1">
-          <button className="bg-transparent border-none cursor-pointer text-lg p-1.5 rounded-md opacity-70 hover:opacity-100 transition-opacity">🔍</button>
-          <button className="bg-transparent border-none cursor-pointer text-lg p-1.5 rounded-md opacity-70 hover:opacity-100 transition-opacity">🔔</button>
-          <button className="bg-transparent border-none cursor-pointer text-lg p-1.5 rounded-md opacity-70 hover:opacity-100 transition-opacity">👤</button>
+          <button className="bg-transparent border-none cursor-pointer text-lg p-1.5 rounded-md text-blue-100 hover:text-white transition-colors">🔍</button>
+          <button className="bg-transparent border-none cursor-pointer text-lg p-1.5 rounded-md text-blue-100 hover:text-white transition-colors">🔔</button>
+          <button className="bg-transparent border-none cursor-pointer text-lg p-1.5 rounded-md text-blue-100 hover:text-white transition-colors">👤</button>
         </div>
 
         <button
-          className="md:hidden ml-auto bg-transparent border-none text-slate-100 text-xl cursor-pointer"
+          className="md:hidden ml-auto bg-transparent border-none text-white text-xl cursor-pointer"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? "✕" : "☰"}
@@ -62,13 +64,13 @@ export default function Header({ currentPage, onNavigate }: HeaderProps) {
       </div>
 
       {menuOpen && (
-        <div className="md:hidden flex flex-col bg-[#0a1120] border-t border-[#1e293b]">
+        <div className="md:hidden flex flex-col bg-[#1a3a5c] border-t border-[#2a5080]">
           {navLinks.map(link => (
             <button
               key={link.page}
               onClick={() => { onNavigate(link.page); setMenuOpen(false) }}
               className={`bg-transparent border-none text-left px-8 py-3 text-sm font-medium cursor-pointer transition-colors
-                ${currentPage === link.page ? "text-slate-100 bg-[#111827]" : "text-slate-400 hover:text-slate-100"}`}
+                ${currentPage === link.page ? "text-white bg-[#24507a]" : "text-blue-100 hover:text-white"}`}
             >
               {link.label}
             </button>

@@ -1,18 +1,36 @@
-export type Standing = {
-  pos: number
-  team: string
-  pj: number
-  dg: string
-  pts: number
-}
+import type { Standing } from "../types"
 
 export const standings: Standing[] = [
-  { pos: 1, team: "Real Madrid",  pj: 5, dg: "+7", pts: 13 },
-  { pos: 2, team: "Bayern",       pj: 5, dg: "+6", pts: 12 },
-  { pos: 3, team: "Inter",        pj: 5, dg: "+4", pts: 10 },
-  { pos: 4, team: "Barcelona",    pj: 5, dg: "+3", pts: 9  },
-  { pos: 5, team: "PSG",          pj: 5, dg: "+2", pts: 8  },
-  { pos: 6, team: "Arsenal",      pj: 5, dg: "+1", pts: 8  },
-  { pos: 7, team: "Dortmund",     pj: 5, dg: "-1", pts: 6  },
-  { pos: 8, team: "Liverpool",    pj: 5, dg: "-2", pts: 5  },
+  { pos: 1,  team: "Real Madrid",   pj: 8, dg: "+14", pts: 22 },
+  { pos: 2,  team: "Bayern",        pj: 8, dg: "+11", pts: 20 },
+  { pos: 3,  team: "Arsenal",       pj: 8, dg: "+9",  pts: 18 },
+  { pos: 4,  team: "Inter",         pj: 8, dg: "+8",  pts: 17 },
+  { pos: 5,  team: "Liverpool",     pj: 8, dg: "+7",  pts: 16 },
+  { pos: 6,  team: "Barcelona",     pj: 8, dg: "+6",  pts: 15 },
+  { pos: 7,  team: "Leverkusen",    pj: 8, dg: "+4",  pts: 14 },
+  { pos: 8,  team: "Atalanta",      pj: 8, dg: "+3",  pts: 13 },
+  { pos: 9,  team: "Aston Villa",   pj: 8, dg: "+2",  pts: 12 },
+  { pos: 10, team: "PSG",           pj: 8, dg: "+2",  pts: 11 },
+  { pos: 11, team: "Atlético",      pj: 8, dg: "+1",  pts: 11 },
+  { pos: 12, team: "Man. City",     pj: 8, dg: "+1",  pts: 10 },
+  { pos: 13, team: "Dortmund",      pj: 8, dg: "0",   pts: 10 },
+  { pos: 14, team: "PSV",           pj: 8, dg: "-1",  pts: 9  },
+  { pos: 15, team: "Feyenoord",     pj: 8, dg: "-1",  pts: 9  },
+  { pos: 16, team: "Sporting CP",   pj: 8, dg: "-2",  pts: 8  },
+  { pos: 17, team: "Monaco",        pj: 8, dg: "-2",  pts: 8  },
+  { pos: 18, team: "Club Brugge",   pj: 8, dg: "-3",  pts: 7  },
+  { pos: 19, team: "Benfica",       pj: 8, dg: "-3",  pts: 7  },
+  { pos: 20, team: "Celtic",        pj: 8, dg: "-4",  pts: 6  },
+  { pos: 21, team: "AC Milan",      pj: 8, dg: "-4",  pts: 6  },
+  { pos: 22, team: "Porto",         pj: 8, dg: "-5",  pts: 5  },
+  { pos: 23, team: "Juventus",      pj: 8, dg: "-6",  pts: 5  },
+  { pos: 24, team: "Chelsea",       pj: 8, dg: "-7",  pts: 4  },
+  { pos: 25, team: "Ajax",          pj: 8, dg: "-7",  pts: 4  },
+  { pos: 26, team: "Girona",        pj: 8, dg: "-8",  pts: 3  },
+  { pos: 27, team: "Real Betis",    pj: 8, dg: "-9",  pts: 3  },
+  { pos: 28, team: "Salzburg",      pj: 8, dg: "-10", pts: 2  },
+  { pos: 29, team: "Shakhtar",      pj: 8, dg: "-11", pts: 2  },
+  { pos: 30, team: "Dinamo Zagreb", pj: 8, dg: "-12", pts: 1  },
+  { pos: 31, team: "Estrella Roja", pj: 8, dg: "-13", pts: 1  },
+  { pos: 32, team: "PAOK",          pj: 8, dg: "-14", pts: 0  },
 ]

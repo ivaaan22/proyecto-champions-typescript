@@ -22,3 +22,11 @@ export type Match = {
   time?: string
   status: MatchStatus
 }
+
+export type Standing = {
+  pos: number
+  team: string
+  pj: number
+  dg: string
+  pts: number
+}
